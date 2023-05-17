@@ -1,10 +1,7 @@
 
 process.stdin.setEncoding("utf8");
-if (process.argv.length != 3) {
-  process.stdout.write(`Usage finalproject.js <port number>`);
-  process.exit(1);
-}
-const portNumber = process.argv[2];
+
+const portNumber = 5000;
 
 
 const path = require("path");
