@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Final Project</title>
+	
+	<style>
+		body{
+			text-align: center;
+			background-color: aqua;
+		}
+		
+		button{
+			border-radius: 1em;
+			margin: 1em;
+			padding: .5em;
+		}
+		input{
+			border-radius: 1em;
+			margin: 1em;
+			text-shadow: silver .125em .125em .125em; 
+			padding: .5em;
+		}
+		textarea{
+			border-radius: 1em;
+			padding: 1em;
+			text-shadow: silver .125em .125em .125em; 
+		}
+		h1{
+			font-family:Ubuntu, serif
+		}
+
+	</style>
+	<%- linkTag %>
+</head>
+
+<body>
+	<h1>Fancy Font Viewer</h1>
+	<hr>
+	<br>
+	<a href="/">HOME</a>
+	<h2>Results</h2>
+	(Invalid/Unknown fonts will display as the default font)<br><br>
+	<%- results %>
+	
+</body>
+
+</html>

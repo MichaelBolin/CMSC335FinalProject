@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Final Project</title>
+	<style>
+		body{
+			text-align: center;
+			background-color: aqua;
+			text-shadow: silver .125em .125em .125em; 
+		}
+		
+		button{
+			border-radius: 1em;
+			margin: 1em;
+			padding: .5em;
+		}
+		input{
+			border-radius: 1em;
+			margin: 1em;
+			text-shadow: silver .125em .125em .125em; 
+			padding: .5em;
+		}
+		textarea{
+			border-radius: 1em;
+			padding: 1em;
+			text-shadow: silver .125em .125em .125em; 
+		}
+		h1{
+			font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+		}
+
+	</style>
+</head>
+
+<body>
+	<h1>Fancy Font Viewer</h1>
+	<hr>
+	<br>
+	<form action="/addToDatabase" method="post" onsubmit="return confirm('Are you sure you want to save this font?')">
+		<fieldset>
+			<div id="secondText"><strong>Input a Google Font:</strong><input type="text" name="font" required></div>
+			<button>Add Font to Saved Font Collection</button>
+			<button type="reset">Clear Input</button>
+		</fieldset>
+	</form>
+	<form action="/display" method="post" onsubmit="return confirm('Are you sure you want to test the current message with all selected fonts?')">
+		<fieldset>
+			<h2><strong>Enter a message to test with different fonts:</strong><br></h2>
+			<textarea cols="80" rows="5" name="message" required></textarea>
+			<br>
+			<button>View Converted Message</button>
+			<input type="reset" value="Clear Message">
+		</fieldset>
+	</form>
+	<br>
+	<form action="/clear" method="post" onsubmit="return confirm('Are you sure you want to clear all saved fonts?')">
+		<fieldset>	
+		<button>Clear All Saved Fonts</button>
+		<a href="/savedFonts">View Saved Fonts</a>
+		</fieldset>
+	</form>
+
+	
+</body>
+
+</html>
