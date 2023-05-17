@@ -112,6 +112,7 @@ app.get("/savedFonts", async (request, response) => {
     await client.close();
 }
 });
-
+connectDB().then(() => {
 app.listen(portNumber);
 console.log(`Web server started and running at http://localhost:${portNumber}`);
+});
